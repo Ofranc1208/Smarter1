@@ -30,19 +30,21 @@
 /* --------------------------------------------------
    Reset & Base Styles
 -------------------------------------------------- */
-/* Reset margins, padding and remove link decorations */
-body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
+/* Remove default margins, padding, and link decorations */
+html, body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
   margin: 0;
   padding: 0;
   text-decoration: none;
 }
 
-/* Base body styles using Inter */
+/* Base typography and color for body */
 body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Headings use Oswald for a tall, condensed look */
@@ -61,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 .bg-scrunchgreen  { background-color: var(--scrunch-green) !important; }
 .bg-scrunchorange { background-color: var(--scrunch-orange) !important; }
 
-/* Announcement bar styling (black bar at top) */
+/* Announcement Bar */
 .announcement-bar {
   background-color: #000;
   color: #fff;
@@ -75,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
-/* Hero section styling */
+/* Hero Section */
 .hero-section {
   padding: 2rem;
   background-color: var(--light-gray);
@@ -86,11 +88,19 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 .hero-section p {
-  font-size: 1.125rem; /* ~18px */
+  font-size: 1.125rem;
   margin-bottom: 1.5rem;
 }
 
-/* Button styles for .btn-warning */
+/* Carousel Profile Image */
+.profile-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Button Styles */
 .btn-warning {
   background-color: var(--scrunch-yellow);
   border-color: var(--scrunch-yellow);
@@ -102,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ffcf2e;
 }
 
-/* Trusted by section */
+/* Trusted By Section */
 .trusted-by-title {
   text-transform: uppercase;
   font-size: 1rem;
@@ -113,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .trusted-logos {
   display: flex;
-  flex-wrap: wrap; /* Stack on smaller screens */
+  flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
   align-items: center;
@@ -121,14 +131,13 @@ h1, h2, h3, h4, h5, h6 {
 .trusted-logos div {
   font-size: 1.125rem;
   color: var(--medium-gray);
-  /* Alternatively, style image logos here */
 }
 .trusted-logos img {
   max-height: 28px;
   filter: grayscale(100%);
 }
 
-/* Explore section styling */
+/* Explore Section */
 .explore-section {
   padding: 2rem 0;
   text-align: center;
@@ -151,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* Answers section styling */
+/* Answers Section */
 .answers-section {
   padding: 2rem;
   text-align: center;
@@ -163,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-/* Generic content sections */
+/* Generic Content Sections */
 .content-section {
   padding: 2rem 1rem;
 }
@@ -182,7 +191,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-/* Footer styling */
+/* Footer */
 footer {
   padding: 2rem;
   text-align: center;
@@ -190,11 +199,11 @@ footer {
   color: var(--footer-text);
 }
 
-/* Common spacing helpers */
+/* Spacing Helpers */
 .mt-5 { margin-top: 3rem !important; }
 .mb-3 { margin-bottom: 1rem !important; }
 
-/* Navigation link styling */
+/* Navigation Link Styling */
 .navbar-nav .nav-link {
   color: var(--text-color);
   transition: color 0.2s;
@@ -203,13 +212,12 @@ footer {
   text-decoration: underline;
   color: #333;
 }
-/* Active page highlighting */
 .navbar-nav .nav-link.active {
   font-weight: 700;
   text-decoration: underline;
 }
 
-/* Optional star icon class */
+/* Optional Star Icon */
 .star-icon {
   display: inline-block;
   margin: 0 0.25rem;
