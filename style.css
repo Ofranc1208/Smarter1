@@ -1,0 +1,219 @@
+/* --------------------------------------------------
+   Global Settings & Variables
+-------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Brand Colors */
+  --scrunch-yellow: #ffd60a;
+  --scrunch-blue: #97c6fe;
+  --scrunch-purple: #b880ff;
+  --scrunch-green: #73d99d;
+  --scrunch-orange: #ffaa48;
+  
+  /* Basic Colors */
+  --text-color: #000;
+  --secondary-text-color: #333;
+  --light-gray: #f9f9f9;
+  --medium-gray: #777;
+  --footer-bg: #000;
+  --footer-text: #fff;
+}
+
+/* Universal Box-Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------
+   Reset & Base Styles
+-------------------------------------------------- */
+/* Reset margins, padding and remove link decorations */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* Base body styles using Inter */
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+/* Headings use Oswald for a tall, condensed look */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+/* --------------------------------------------------
+   Utility Classes & Components
+-------------------------------------------------- */
+/* Brand color utility classes */
+.bg-scrunchyellow { background-color: var(--scrunch-yellow) !important; }
+.bg-scrunchblue   { background-color: var(--scrunch-blue) !important; }
+.bg-scrunchpurple { background-color: var(--scrunch-purple) !important; }
+.bg-scrunchgreen  { background-color: var(--scrunch-green) !important; }
+.bg-scrunchorange { background-color: var(--scrunch-orange) !important; }
+
+/* Announcement bar styling (black bar at top) */
+.announcement-bar {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+.announcement-bar a {
+  color: #fff;
+}
+.announcement-bar a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section styling */
+.hero-section {
+  padding: 2rem;
+  background-color: var(--light-gray);
+}
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.hero-section p {
+  font-size: 1.125rem; /* ~18px */
+  margin-bottom: 1.5rem;
+}
+
+/* Button styles for .btn-warning */
+.btn-warning {
+  background-color: var(--scrunch-yellow);
+  border-color: var(--scrunch-yellow);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+.btn-warning:hover {
+  background-color: #ffcf2e;
+}
+
+/* Trusted by section */
+.trusted-by-title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #666;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.trusted-logos {
+  display: flex;
+  flex-wrap: wrap; /* Stack on smaller screens */
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.trusted-logos div {
+  font-size: 1.125rem;
+  color: var(--medium-gray);
+  /* Alternatively, style image logos here */
+}
+.trusted-logos img {
+  max-height: 28px;
+  filter: grayscale(100%);
+}
+
+/* Explore section styling */
+.explore-section {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: var(--light-gray);
+}
+.explore-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.explore-cards .card {
+  border: none;
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+.explore-cards .card h5 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+/* Answers section styling */
+.answers-section {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-color);
+  background-color: var(--scrunch-orange);
+}
+.answers-section h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Generic content sections */
+.content-section {
+  padding: 2rem 1rem;
+}
+.content-section h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.content-section p {
+  margin-bottom: 1rem;
+  color: var(--secondary-text-color);
+}
+.content-section img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Footer styling */
+footer {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+/* Common spacing helpers */
+.mt-5 { margin-top: 3rem !important; }
+.mb-3 { margin-bottom: 1rem !important; }
+
+/* Navigation link styling */
+.navbar-nav .nav-link {
+  color: var(--text-color);
+  transition: color 0.2s;
+}
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+  color: #333;
+}
+/* Active page highlighting */
+.navbar-nav .nav-link.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Optional star icon class */
+.star-icon {
+  display: inline-block;
+  margin: 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
