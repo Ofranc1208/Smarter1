@@ -55,6 +55,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
 }
+h3 {
+  font-size: 1.60rem;
+  line-height: 1.2;
+}
 
 /* --------------------------------------------------
    Utility Classes & Components
@@ -237,42 +241,49 @@ footer {
 .banner-container {
   width: 100%;
   overflow: hidden;
-  background-color: var(--scrunch-orange);
+  background-color: var(--light-gray);
   padding: 10px 0;
   margin-bottom: 2rem;
 }
 
 .banner {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 20px;
   white-space: nowrap;
-  padding-left: 10%;  /* Reduced from 50% to 10% */
-  animation: ticker 12s linear infinite;
+  padding-left: 10%;
+  animation: ticker 35s linear infinite;
   animation-delay: 0s;
   font-family: oswald, sans-serif;
   color: var(--text-color);
 }
 
-
 .banner:hover {
   animation-play-state: paused;
 }
 
-.ticker-icon {
-  vertical-align: middle;
-  margin-right: 10px;
-  height: 24px;
+/* Container for logos */
+.ticker-logos {
+  display: inline-flex;
+  align-items: center;
+  gap: 50px;
 }
 
-/* Keyframes for ticker animation */
+/* Adjust logo sizes to be about 65% smaller */
+.ticker-logo {
+  max-height: 30px; /* Adjust as needed */
+  width: auto;
+}
+
+/* Example ticker keyframes (left-to-right) */
 @keyframes ticker {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
   }
 }
-
 
 /* Optional Star Icon */
 .star-icon {
