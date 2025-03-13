@@ -110,8 +110,8 @@
   </header>
 
   <main>
-    <!-- HERO / MAIN SECTION -->
-    <section class="hero-section text-center p-4 p-md-5 bg-light">
+    <!-- HERO / MAIN SECTION with Hero-Move Animation -->
+    <section class="hero-section hero-move text-center p-4 p-md-5 bg-light">
       <div class="container">
         <h1 class="display-5">Instantly Calculate Your Settlement Payout Value</h1>
         <p class="lead my-3">Get your personalized offer in seconds – no personal information required.</p>
@@ -124,49 +124,85 @@
       <div class="container">
         <div id="profileCarousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner text-center">
-            <!-- Slide 1 -->
+            <!-- Slide 1: Self Calculate an Early Payout Video -->
             <div class="carousel-item active">
-              <h3 class="mb-4" style="color: var(--scrunch-purple);">
-                <a href="ProfileCatalog.html" style="color: inherit;">Professionals Theme</a>
+              <h3 class="mb-4" style="color: var(--footer-bg);">
+                <a href="https://youtu.be/TxFogK2R61o?si=O3fLrCLWWKOXVxzJ" style="color: inherit;">
+                  Self Calculate an Early Payout
+                </a>
               </h3>
               <div class="card shadow-sm">
-                <img src="Image-min.PNG" class="card-img-top profile-img" alt="Preview of Professional Theme">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/TxFogK2R61o?si=O3fLrCLWWKOXVxzJ"
+                          title="Self Calculate an Early Payout"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen>
+                  </iframe>
+                </div>
                 <div class="card-body">
                   <p class="card-text text-muted">
-                    <a href="ProfileCatalog.html">Click &amp; Find Your Perfect Theme</a>
+                    <a href="https://youtu.be/TxFogK2R61o?si=O3fLrCLWWKOXVxzJ" style="color: inherit;">
+                        See Our Process Tutorial
+                    </a>
                   </p>
                 </div>
               </div>
             </div>
-            <!-- Slide 2 -->
+    
+            <!-- Slide 2: Student Theme Video -->
             <div class="carousel-item">
-              <h3 class="mb-4" style="color: var(--scrunch-purple);">
-                <a href="ProfileCatalog.html" style="color: inherit;">Student Theme</a>
+              <h3 class="mb-4" style="color: var(--footer-bg);">
+                <a href="https://youtu.be/ur9pB2-xkk4?si=2jYVmdRavS-Dl_GT" style="color: inherit;">
+                  Live Debt Free
+                </a>
               </h3>
               <div class="card shadow-sm">
-                <img src="Image-min.PNG" class="card-img-top profile-img" alt="Preview of Student Theme">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/ur9pB2-xkk4?si=2jYVmdRavS-Dl_GT"
+                          title="Student Theme Video"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen>
+                  </iframe>
+                </div>
                 <div class="card-body">
                   <p class="card-text text-muted">
-                    <a href="ProfileCatalog.html">Click &amp; Find Your Perfect Theme</a>
+                    <a href="https://youtu.be/ur9pB2-xkk4?si=2jYVmdRavS-Dl_GT" style="color: inherit;">
+                       Benefits of Being Debt Free
+                    </a>
                   </p>
                 </div>
               </div>
             </div>
-            <!-- Slide 3 -->
+    
+            <!-- Slide 3: Freelancer Theme Video -->
             <div class="carousel-item">
-              <h3 class="mb-4" style="color: var(--scrunch-purple);">
-                <a href="ProfileCatalog.html" style="color: inherit;">Freelancer Theme</a>
+              <h3 class="mb-4" style="color: var(--footer-bg);">
+                <a href="https://youtu.be/AYFvqQCCSoY?si=rjVbDlES5xs14Sll" style="color: inherit;">
+                  Family Protection
+                </a>
               </h3>
               <div class="card shadow-sm">
-                <img src="Image-min.PNG" class="card-img-top profile-img" alt="Preview of Freelancer Theme">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/AYFvqQCCSoY?si=rjVbDlES5xs14Sll"
+                          title="Freelancer Theme Video"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen>
+                  </iframe>
+                </div>
                 <div class="card-body">
                   <p class="card-text text-muted">
-                    <a href="ProfileCatalog.html">Click &amp; Find Your Perfect Theme</a>
+                    <a href="https://youtu.be/AYFvqQCCSoY?si=rjVbDlES5xs14Sll" style="color: inherit;">
+                      Life Contigent Payments
+                    </a>
                   </p>
                 </div>
               </div>
             </div>
           </div>
+          
           <!-- Carousel Controls -->
           <button class="carousel-control-prev" type="button" data-bs-target="#profileCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -181,63 +217,54 @@
     </section>
     <!-- END CAROUSEL SECTION -->
 
-    <!-- Trusted By Section -->
-    <section class="py-5">
-      <div class="container text-center">
-        <h5 class="trusted-by-title">Trusted by</h5>
-        <div class="trusted-logos d-flex justify-content-around align-items-center flex-wrap">
-          <div>Lenovo</div>
-          <div>BairesDev</div>
-          <div>Fictiv</div>
-          <div>Crunchbase</div>
-          <div>BigTime</div>
-          <div>PennState</div>
+    <!-- TICKER BANNER SECTION -->
+    <div class="banner-container">
+      <div class="banner">
+       As Seen On:
+        <div class="ticker-logos" style="display: inline-flex; align-items: center; gap: 50px; margin-right: 20px;">
+          <img src="Picture.png/logo1.png" alt="Logo 1" class="ticker-logo">
+          <img src="Picture.png/logo2.png" alt="Logo 2" class="ticker-logo">
+          <img src="Picture.png/logo3.png" alt="Logo 3" class="ticker-logo">
+          <img src="Picture.png/logo4.png" alt="Logo 4" class="ticker-logo">
         </div>
+        Welcome to Our Website! Enjoy Exclusive Offers &amp; Updates. Stay tuned for more exciting news and promotions.
       </div>
-    </section>
+    </div>
+    <!-- END TICKER BANNER SECTION -->
 
-    <!-- Explore Sections -->
-    <!-- First Explore Section (Scrunch Orange) -->
+       <!-- Explore Section (Four Boxes) -->
     <section class="explore-section">
       <div class="container">
         <h2>Explore the Scrunch Platform</h2>
-        <div class="row g-4 explore-cards">
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="card bg-scrunchorange p-3">
+        <!-- 
+             "justify-content-center" ensures items are centered 
+             "g-4" adds spacing between columns
+        -->
+        <div class="row g-4 explore-cards justify-content-center">
+          <!-- Box 1: Yellow -->
+          <div class="col-12 col-sm-6 col-md-3 text-center">
+            <div class="card p-3 bg-scrunchyellow">
               <h5>Monitoring</h5>
             </div>
           </div>
-          <!-- Additional cards can be added here -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Second Explore Section (Scrunch Green) -->
-    <section class="explore-section">
-      <div class="container">
-        <h2>Explore the Scrunch Platform</h2>
-        <div class="row g-4 explore-cards">
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="card bg-scrunchgreen p-3">
-              <h5>Monitoring</h5>
+          <!-- Box 2: Blue -->
+          <div class="col-12 col-sm-6 col-md-3 text-center">
+            <div class="card p-3 bg-scrunchblue">
+              <h5>Insights</h5>
             </div>
           </div>
-          <!-- Additional cards can be added here -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Third Explore Section (Scrunch Yellow) -->
-    <section class="explore-section">
-      <div class="container">
-        <h2>Explore the Scrunch Platform</h2>
-        <div class="row g-4 explore-cards">
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="card bg-scrunchyellow p-3">
-              <h5>Monitoring</h5>
+          <!-- Box 3: Purple -->
+          <div class="col-12 col-sm-6 col-md-3 text-center">
+            <div class="card p-3 bg-scrunchpurple">
+              <h5>Knowledge Hub</h5>
             </div>
           </div>
-          <!-- Additional cards can be added here -->
+          <!-- Box 4: Green -->
+          <div class="col-12 col-sm-6 col-md-3 text-center">
+            <div class="card p-3 bg-scrunchgreen">
+              <h5>Journey Mapping</h5>
+            </div>
+          </div>
         </div>
       </div>
     </section>
