@@ -24,9 +24,7 @@
 }
 
 /* Universal Box-Sizing */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -73,12 +71,8 @@ h3 {
   text-align: center;
   padding: 0.5rem 1rem;
 }
-.announcement-bar a {
-  color: #fff;
-}
-.announcement-bar a:hover {
-  text-decoration: underline;
-}
+.announcement-bar a { color: #fff; }
+.announcement-bar a:hover { text-decoration: underline; }
 
 /* Hero Section */
 .hero-section {
@@ -120,9 +114,7 @@ h3 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
 }
-.btn-warning:hover {
-  background-color: #ffcf2e;
-}
+.btn-warning:hover { background-color: #ffcf2e; }
 
 /* Trusted By Section */
 .trusted-by-title {
@@ -140,14 +132,8 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.trusted-logos div {
-  font-size: 1.125rem;
-  color: var(--medium-gray);
-}
-.trusted-logos img {
-  max-height: 28px;
-  filter: grayscale(100%);
-}
+.trusted-logos div { font-size: 1.125rem; color: var(--medium-gray); }
+.trusted-logos img { max-height: 28px; filter: grayscale(100%); }
 
 /* Explore Section */
 .explore-section {
@@ -155,10 +141,7 @@ h3 {
   text-align: center;
   background-color: var(--light-gray);
 }
-.explore-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
+.explore-section h2 { font-size: 2rem; margin-bottom: 1.5rem; }
 .explore-cards .card {
   border: none;
   min-height: 150px;
@@ -167,15 +150,10 @@ h3 {
   align-items: center;
   color: var(--text-color);
 }
-.explore-cards .card h5 {
-  font-size: 1.25rem;
-  margin: 0;
-}
+.explore-cards .card h5 { font-size: 1.25rem; margin: 0; }
 
 /* Stats / Counters Section */
-.stats-section {
-  background-color: #f8f9fa;
-}
+.stats-section { background-color: #f8f9fa; }
 .stat-item {
   font-size: 1.25rem;
   font-weight: 400;
@@ -193,10 +171,7 @@ h3 {
   padding: 2rem 0;
   text-align: center;
 }
-.image-frame-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
+.image-frame-section h2 { font-size: 2rem; margin-bottom: 1.5rem; }
 .image-frame {
   max-width: 400px;
   margin: 1rem auto;
@@ -209,20 +184,10 @@ h3 {
 }
 
 /* Info Section Adjustments */
-.info-section {
-  text-align: left;
-}
-.info-section h5 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-.info-section ul li {
-  margin-bottom: 0.5rem;
-}
-.info-section ul li a {
-  font-size: 0.875rem;
-  line-height: 1.4;
-}
+.info-section { text-align: left; }
+.info-section h5 { font-size: 1rem; margin-bottom: 1rem; }
+.info-section ul li { margin-bottom: 0.5rem; }
+.info-section ul li a { font-size: 0.875rem; line-height: 1.4; }
 
 /* Answers Section */
 .answers-section {
@@ -231,15 +196,10 @@ h3 {
   color: var(--text-color);
   background-color: var(--scrunch-orange);
 }
-.answers-section h3 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-}
+.answers-section h3 { font-size: 1.75rem; margin-bottom: 1rem; }
 
 /* Generic Content Sections */
-.content-section {
-  padding: 2rem 1rem;
-}
+.content-section { padding: 2rem 1rem; }
 .content-section h4 {
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
@@ -253,6 +213,15 @@ h3 {
   max-width: 100%;
   height: auto;
   margin-bottom: 1rem;
+}
+
+/* Testimonials Section Heading */
+.testimonials-section h2,
+.testimonials-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
 }
 
 /* Footer */
@@ -287,7 +256,7 @@ footer {
   overflow: hidden;
   background-color: var(--light-gray);
   padding: 10px 0;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 .banner {
   display: flex;
@@ -300,24 +269,54 @@ footer {
   font-family: oswald, sans-serif;
   color: var(--text-color);
 }
-.banner:hover {
-  animation-play-state: paused;
-}
+.banner:hover { animation-play-state: paused; }
 .ticker-logos {
   display: inline-flex;
   align-items: center;
   gap: 50px;
 }
-.ticker-logo {
-  max-height: 30px;
-  width: auto;
-}
+.ticker-logo { max-height: 30px; width: auto; }
 @keyframes ticker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
 
-/* Stats / Counters Keyframes (if needed) */
+/* Cookie Notification Popup */
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--light-gray);
+  color: var(--text-color);
+  padding: 1rem;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cookie-consent p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+.cookie-consent .cookie-buttons {
+  margin-top: 0.5rem;
+}
+.cookie-consent button {
+  margin: 0.25rem;
+  background-color: var(--scrunch-yellow);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+.cookie-consent button:hover {
+  background-color: #ffcf2e;
+}
+
 /* Optional Star Icon */
 .star-icon {
   display: inline-block;
@@ -326,4 +325,3 @@ footer {
   font-weight: 700;
   line-height: 1;
 }
-

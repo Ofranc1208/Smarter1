@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta & SEO -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SmarterPayouts | Get More Value from Your Settlement</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="SmarterPayouts">
-  
-  <!-- Basic SEO Meta Tags -->
   <meta name="description" content="Get More Value from Your Structured Settlement with SmarterPayouts. Fast, Secure, and Transparent Solutions for Annuities and Settlement Payments.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.smarterpayouts.com/">
   
-  <!-- Open Graph / Social Media Tags -->
+  <!-- Open Graph & Twitter Cards -->
   <meta property="og:title" content="SmarterPayouts | Get More Value from Your Settlement">
   <meta property="og:description" content="Fast, Secure, and Transparent Solutions for Annuities and Settlement Payments.">
   <meta property="og:url" content="https://www.smarterpayouts.com/">
@@ -20,26 +19,20 @@
   <meta property="og:image" content="https://www.smarterpayouts.com/og-image.jpg">
   <meta property="og:site_name" content="SmarterPayouts">
   <meta property="og:locale" content="en_US">
-  
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SmarterPayouts | Get More Value from Your Settlement">
   <meta name="twitter:description" content="Fast, Secure, and Transparent Solutions for Annuities and Settlement Payments.">
   <meta name="twitter:image" content="https://www.smarterpayouts.com/og-image.jpg">
-  
-  <!-- Theme Color -->
   <meta name="theme-color" content="#ffd60a">
-  
-  <!-- Manifest (PWA Support) -->
   <link rel="manifest" href="/site.webmanifest">
   
-  <!-- Preconnect and DNS Prefetch for Faster Loading -->
+  <!-- Preconnect & DNS Prefetch -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   
-  <!-- Bootstrap CSS (via CDN) -->
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <!-- Custom CSS -->
@@ -50,7 +43,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   
-  <!-- Structured Data: Organization JSON-LD -->
+  <!-- Structured Data: Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -81,40 +74,65 @@
   </script>
 </head>
 <body>
+  <!-- HEADER & NAVIGATION -->
   <header>
-    <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="logo.png" alt="SmarterPayouts Logo" height="40">
+          <img src="logo.png" alt="SmarterPayouts Logo" height="40" loading="lazy">
           <span class="ms-2 fw-bold">SmarterPayouts</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Top-level links -->
             <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
             <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Payout Calculator</a></li>
-            <li class="nav-item"><a class="nav-link" href="methodology.html">Our Methodology</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Accept The Offer</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Court Approval</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Get YourCash /a></li>
+            
+            <!-- Dropdown 1: Steps To Cash -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="stepsToCashDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Steps To Cash
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="stepsToCashDropdown">
+                <!-- Replace '#' with actual page links or anchors -->
+                <li><a class="dropdown-item" href="pa">Payout Calculator</a></li>
+                <li><a class="dropdown-item" href="#">Accept The Offer</a></li>
+                <li><a class="dropdown-item" href="#">Court Approval</a></li>
+                <li><a class="dropdown-item" href="#">Get Your Cash</a></li>
+              </ul>
+            </li>
+            
+            <!-- Dropdown 2: Why SmarterPayouts -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="whySmarterPayoutsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Why SmarterPayouts
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="whySmarterPayoutsDropdown">
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="methodology.html">Our Methodology</a></li>
+                <li><a class="dropdown-item" href="why-choose-us.html">Why Choose Us?</a></li>
+              </ul>
+            </li>
+            
+            <!-- Remaining top-level links -->
             <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
-            <li class="nav-item"><a class="nav-link" href="why-choose-us.html">Why Choose Us?</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- END NAVIGATION -->
   </header>
+  
+  
 
+  <!-- MAIN CONTENT -->
   <main>
-    <!-- HERO / MAIN SECTION with Hero-Move Animation -->
+    <!-- HERO SECTION with Animation -->
     <section class="hero-section hero-move text-center p-4 p-md-5 bg-light">
       <div class="container">
         <h1 class="display-5">Instantly Calculate Your Settlement Payout Value</h1>
@@ -123,228 +141,262 @@
       </div>
     </section>
 
- <!-- CAROUSEL SECTION (Right after the hero) -->
- <section class="carousel-section my-5">
-  <div class="container">
-    <div id="profileCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner text-center">
-        <!-- Slide 1: Self Calculate an Early Payout Video -->
-        <div class="carousel-item active">
-          <h3 class="mb-4" style="color: var(--footer-bg);">
-            <a href="https://youtu.be/TxFogK2R61o?si=O3fLrCLWWKOXVxzJ" style="color: inherit;">
-              How To Calculate An Early Payout
-            </a>
-          </h3>
-          <div class="card" style="border: none;">
-            <div class="ratio ratio-16x9">
-              <iframe
-                src="https://www.youtube.com/embed/TxFogK2R61o?si=O3fLrCLWWKOXVxzJ"
-                title="Self Calculate an Early Payout"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
+    <!-- CAROUSEL SECTION (Video Slides) -->
+    <section class="carousel-section my-5">
+      <div class="container">
+        <div id="profileCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner text-center">
+            <!-- Slide 1: Self Calculate Video -->
+            <div class="carousel-item active">
+              <h3 class="mb-4" style="color: var(--footer-bg);">
+                <a href="https://youtu.be/TxFogK2R61o?si=O3fLrCLWWKOXVxzJ" style="color: inherit;">How To Calculate An Early Payout</a>
+              </h3>
+              <div class="card border-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/TxFogK2R61o?si=O3fLrCLWWKOXVxzJ" title="Self Calculate an Early Payout" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2: Live Debt Free Video -->
+            <div class="carousel-item">
+              <h3 class="mb-4" style="color: var(--footer-bg);">
+                <a href="https://youtu.be/ur9pB2-xkk4?si=2jYVmdRavS-Dl_GT" style="color: inherit;">Live Debt Free</a>
+              </h3>
+              <div class="card border-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/ur9pB2-xkk4?si=2jYVmdRavS-Dl_GT" title="Live Debt Free" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3: Court Approved Process Video -->
+            <div class="carousel-item">
+              <h3 class="mb-4" style="color: var(--footer-bg);">
+                <a href="https://youtu.be/AYFvqQCCSoY?si=rjVbDlES5xs14Sll" style="color: inherit;">Court Approved Process</a>
+              </h3>
+              <div class="card border-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/AYFvqQCCSoY?si=rjVbDlES5xs14Sll" title="Court Approved Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <!-- Slide 2: Live Debt Free -->
-        <div class="carousel-item">
-          <h3 class="mb-4" style="color: var(--footer-bg);">
-            <a href="https://youtu.be/ur9pB2-xkk4?si=2jYVmdRavS-Dl_GT" style="color: inherit;">
-              Live Debt Free
-            </a>
-          </h3>
-          <div class="card" style="border: none;">
-            <div class="ratio ratio-16x9">
-              <iframe
-                src="https://www.youtube.com/embed/ur9pB2-xkk4?si=2jYVmdRavS-Dl_GT"
-                title="Live Debt Free"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 3: Court Approved Process -->
-        <div class="carousel-item">
-          <h3 class="mb-4" style="color: var(--footer-bg);">
-            <a href="https://youtu.be/AYFvqQCCSoY?si=rjVbDlES5xs14Sll" style="color: inherit;">
-              Court Approved Process
-            </a>
-          </h3>
-          <div class="card" style="border: none;">
-            <div class="ratio ratio-16x9">
-              <iframe
-                src="https://www.youtube.com/embed/AYFvqQCCSoY?si=rjVbDlES5xs14Sll"
-                title="Court Approved Process"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
+          <!-- Carousel Controls with ARIA labels -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#profileCarousel" data-bs-slide="prev" aria-label="Previous Slide">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#profileCarousel" data-bs-slide="next" aria-label="Next Slide">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
+    </section>
 
-      <!-- Carousel Controls -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#profileCarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#profileCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-</section>
-<!-- END CAROUSEL SECTION -->
-
-    <!-- EXPLORE SECTION (Four Boxes with Logos & Text) -->
+    <!-- EXPLORE SECTION (4 Quick Steps to Cash) -->
     <section class="explore-section">
       <div class="container">
         <h2>4 Quick Steps to Cash</h2>
         <div class="row g-4 explore-cards justify-content-center">
-          <!-- Box 1: Green -->
+          <!-- Step 1: Calculate Your Payout -->
           <div class="col-12 col-sm-6 col-md-3 text-center">
-            <div class="card p-3 bg-scrunchgreen">
-              <img src="icons8-calculator-50.png" alt="Step 1 Icon" class="mx-auto d-block mb-2" style="height: 40px;">
-              <h3>Calculate Your Payout</h3>
-              <p class="mt-2">Use Our Calculator for an Instant Quote</p>
-            </div>
+            <a href="calculate-your-payout.html" class="text-decoration-none">
+              <div class="card p-3 bg-scrunchgreen">
+                <img src="icons8-calculator-50.png" alt="Calculator Icon" class="mx-auto d-block mb-2" style="height: 40px;" loading="lazy">
+                <h3>Calculate Your Payout</h3>
+                <p class="mt-2">No Personal Information Needed</p>
+              </div>
+            </a>
           </div>
-          <!-- Box 2: Blue -->
+          <!-- Step 2: Accept the Offer -->
           <div class="col-12 col-sm-6 col-md-3 text-center">
-            <div class="card p-3 bg-scrunchblue">
-              <img src="icons8-accept-80.png" alt="Step 2 Icon" class="mx-auto d-block mb-2" style="height: 40px;">
-              <h3>Accept the Offer</h3>
-              <p class="mt-2">Review & Accept Your Personalized Offer</p>
-            </div>
+            <a href="Accept Offer.html" class="text-decoration-none">
+              <div class="card p-3 bg-scrunchblue">
+                <img src="icons8-accept-80.png" alt="Accept Icon" class="mx-auto d-block mb-2" style="height: 40px;" loading="lazy">
+                <h3>Accept the Offer</h3>
+                <p class="mt-2">Review Your Personalized Offer</p>
+              </div>
+            </a>
           </div>
-          <!-- Box 3: Purple -->
+          <!-- Step 3: Court Approval -->
           <div class="col-12 col-sm-6 col-md-3 text-center">
-            <div class="card p-3 bg-scrunchpurple">
-              <img src="icons8-court-50.png" alt="Step 3 Icon" class="mx-auto d-block mb-2" style="height: 40px;">
-              <h3>Court Approval</h3>
-              <p class="mt-2">We Handle Legal Details for Smooth Approval</p>
-            </div>
+            <a href="Court Approval Process.html" class="text-decoration-none">
+              <div class="card p-3 bg-scrunchpurple">
+                <img src="icons8-court-50.png" alt="Court Icon" class="mx-auto d-block mb-2" style="height: 40px;" loading="lazy">
+                <h3>Court Approval</h3>
+                <p class="mt-2">We Will Handle The Legal Work</p>
+              </div>
+            </a>
           </div>
-          <!-- Box 4: Yellow -->
+          <!-- Step 4: Get Your Cash -->
           <div class="col-12 col-sm-6 col-md-3 text-center">
-            <div class="card p-3 bg-scrunchyellow">
-              <img src="icons8-money-80.png" alt="Step 4 Icon" class="mx-auto d-block mb-2" style="height: 40px;">
-              <h3>Get Your Cash</h3>
-              <p class="mt-2">Once approved, receive your funds quickly and securely</p>
-            </div>
+            <a href="get-your-cash.html" class="text-decoration-none">
+              <div class="card p-3 bg-scrunchyellow">
+                <img src="icons8-money-80.png" alt="Money Icon" class="mx-auto d-block mb-2" style="height: 40px;" loading="lazy">
+                <h3>Get Your Cash</h3>
+                <p class="mt-2">Receive Your Funds Wire Or Check</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </section>
+    
 
     <!-- STATS SECTION -->
     <section id="stats" class="stats-section py-5">
       <div class="container">
         <div class="row text-center">
           <div class="col-6 col-md-3 stat-item">
-            <h2 class="counter" data-target="200">0</h2>
-            <p>Clients Helped</p>
+            <h2 class="counter" data-target="206">0</h2>
+            <p>Happy Clients</p>
           </div>
           <div class="col-6 col-md-3 stat-item">
-            <h2 class="counter" data-target="150">0</h2>
+            <h2 class="counter" data-target="207">0</h2>
             <p>Deals Funded</p>
           </div>
           <div class="col-6 col-md-3 stat-item">
-            <h2 class="counter" data-target="500">0</h2>
-            <p>Million Dollars Raised</p>
+            <h2 class="counter" data-target="100" data-prefix="$" data-suffix=" MM">0</h2>
+            <p>In Payments Secured</p>
           </div>
           <div class="col-6 col-md-3 stat-item">
-            <h2 class="counter" data-target="7">0</h2>
-            <p>Years in Business</p>
+            <h2 class="counter" data-target="7" data-suffix=" yrs">0</h2>
+            <p>Of Trusted Service</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TWO IMAGE FRAMES SECTION -->
-    <section class="image-frame-section">
-      <div class="container">
-        <h2>Join Our Mailing List</h2>
-        <div class="row g-4">
-          <!-- Frame 1 -->
-          <div class="col-12 col-md-6 text-center">
-            <div class="image-frame">
-              <img src="OfferLetter.PNG" alt="Offer Letter" class="img-fluid">
-            </div>
-            <p>Get Quarterly Appraisals</p>
-          </div>
-          <!-- Frame 2 -->
-          <div class="col-12 col-md-6 text-center">
-            <div class="image-frame">
-              <img src="Heremoney.PNG" alt="Offer Letter" class="img-fluid">
-            </div>
-            <p>A short description about our offers.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TICKER BANNER SECTION -->
+    <!-- TICKER BANNER SECTION (Scrolling Logos) -->
     <div class="banner-container">
       <div class="banner">
         <div class="ticker-logos">
-          <img src="Asseen1.PNG" alt="Logo 1" class="ticker-logo">
-          <img src="Asseen2.PNG" alt="Logo 2" class="ticker-logo">
-          <img src="Asseen3.PNG" alt="Logo 3" class="ticker-logo">
-          <img src="Asseen4.PNG" alt="Logo 4" class="ticker-logo">
+          <img src="Asseen1.PNG" alt="As Seen Logo 1" class="ticker-logo" loading="lazy">
+          <img src="Asseen2.PNG" alt="As Seen Logo 2" class="ticker-logo" loading="lazy">
+          <img src="Asseen3.PNG" alt="As Seen Logo 3" class="ticker-logo" loading="lazy">
+          <img src="Asseen4.PNG" alt="As Seen Logo 4" class="ticker-logo" loading="lazy">
+          <img src="Asseen1.PNG" alt="As Seen Logo 1" class="ticker-logo" loading="lazy">
+          <img src="Asseen2.PNG" alt="As Seen Logo 2" class="ticker-logo" loading="lazy">
+          <img src="Asseen3.PNG" alt="As Seen Logo 3" class="ticker-logo" loading="lazy">
+          <img src="Asseen4.PNG" alt="As Seen Logo 4" class="ticker-logo" loading="lazy">
+          <img src="Asseen1.PNG" alt="As Seen Logo 1" class="ticker-logo" loading="lazy">
+          <img src="Asseen2.PNG" alt="As Seen Logo 2" class="ticker-logo" loading="lazy">
+          <img src="Asseen3.PNG" alt="As Seen Logo 3" class="ticker-logo" loading="lazy">
+          <img src="Asseen4.PNG" alt="As Seen Logo 4" class="ticker-logo" loading="lazy">
           <!-- Repeat logos as needed -->
         </div>
       </div>
     </div>
 
-    <!-- Bottom Info Section -->
-    <section class="info-section bg-black text-white py-5">
+    <!-- TESTIMONIALS SECTION (Scrolling horizontally) -->
+    <section class="testimonials-section py-5">
       <div class="container">
-        <div class="row g-4">
-          <!-- Column 1 -->
-          <div class="col-md-6">
-            <h5 class="fw-bold mb-3">Navigation</h5>
-            <ul class="list-unstyled">
-              <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-              <li><a href="About Us.html" class="text-white text-decoration-none">About Us</a></li>
-              <li><a href="how-it-works.html" class="text-white text-decoration-none">How It Works</a></li>
-              <li><a href="methodology.html" class="text-white text-decoration-none">Our Methodology</a></li>
-              <li><a href="index.html" class="text-white text-decoration-none">Payout Calculator</a></li>
-              <li><a href="about.html" class="text-white text-decoration-none">Accept The Offer</a></li>
-              <li><a href="how-it-works.html" class="text-white text-decoration-none">Court Approval</a></li>
-              <li><a href="methodology.html" class="text-white text-decoration-none">Get YourCash</a></li>
-            </ul>
+        <h2 class="testimonials-heading">Real Client Experiences</h2>
+      </div>
+      <div class="banner-container">
+        <div class="banner d-flex align-items-center gap-4">
+          <!-- Testimonial 1 -->
+          <div class="card border-0 shadow-sm" style="min-width: 300px; white-space: normal;">
+            <div class="card-body">
+              <p class="card-text">
+                “SmarterPayouts made the entire process so simple. I received my lump sum quicker than I ever imagined. Highly recommend their service.”
+              </p>
+            </div>
+            <div class="card-footer bg-white border-0 d-flex align-items-center">
+              <img src="images/client1.jpg" alt="Client Jane Doe" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;" loading="lazy">
+              <div>
+                <h6 class="mb-0">Jane Doe</h6>
+                <small class="text-muted">Florida</small>
+              </div>
+            </div>
           </div>
-          <!-- Column 2 -->
-          <div class="col-md-6">
-            <h5 class="fw-bold mb-3">More</h5>
-            <ul class="list-unstyled">
-              <li><a href="faqs.html" class="text-white text-decoration-none">FAQs</a></li>
-              <li><a href="why-choose-us.html" class="text-white text-decoration-none">Why Choose Us?</a></li>
-              <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
-              <li><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
-            </ul>
+          <!-- Testimonial 2 -->
+          <div class="card border-0 shadow-sm" style="min-width: 300px; white-space: normal;">
+            <div class="card-body">
+              <p class="card-text">
+                “I was skeptical, but SmarterPayouts exceeded my expectations. Their online calculator gave me an instant quote and guided me every step of the way.”
+              </p>
+            </div>
+            <div class="card-footer bg-white border-0 d-flex align-items-center">
+              <img src="images/client2.jpg" alt="Client John Smith" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;" loading="lazy">
+              <div>
+                <h6 class="mb-0">John Smith</h6>
+                <small class="text-muted">California</small>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="card border-0 shadow-sm" style="min-width: 300px; white-space: normal;">
+            <div class="card-body">
+              <p class="card-text">
+                “Thanks to SmarterPayouts, I finally have the cash I needed to pay off my debt and start a new chapter. Their process is seamless.”
+              </p>
+            </div>
+            <div class="card-footer bg-white border-0 d-flex align-items-center">
+              <img src="images/client3.jpg" alt="Client Maria Gonzalez" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;" loading="lazy">
+              <div>
+                <h6 class="mb-0">Maria Gonzalez</h6>
+                <small class="text-muted">New York</small>
+              </div>
+            </div>
+          </div>
+          <!-- Add more testimonial cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGE FRAME SECTION (Call-to-Action) -->
+    <section class="image-frame-section">
+      <div class="container">
+        <h2>Join Our Mailing List</h2>
+        <div class="row g-4 align-items-center">
+          <!-- Frame 1 -->
+          <div class="col-12 col-md-6 text-center">
+            <div class="image-frame">
+              <img src="OfferLetter.PNG" alt="Offer Letter" class="img-fluid" loading="lazy">
+            </div>
+            <p>Receive Updated Quarterly Offers</p>
+          </div>
+          <!-- Frame 2 -->
+          <div class="col-12 col-md-6 text-center">
+            <div class="image-frame">
+              <img src="Heremoney.PNG" alt="Money Offer" class="img-fluid" loading="lazy">
+            </div>
+            <p>A short description about the offer goes here.</p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- BOTTOM INFO SECTION -->
+<!-- BOTTOM INFO SECTION -->
+<section class="info-section bg-black text-white py-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Column 1: Navigation -->
+      <div class="col-md-6">
+        <h5 class="fw-bold mb-3">Navigation</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+          <li><a href="how-it-works.html" class="text-white text-decoration-none">How It Works</a></li>
+          <li><a href="methodology.html" class="text-white text-decoration-none">Our Methodology</a></li>
+        </ul>
+      </div>
+      <!-- Column 2: More -->
+      <div class="col-md-6">
+        <h5 class="fw-bold mb-3">More</h5>
+        <ul class="list-unstyled">
+          <li><a href="faqs.html" class="text-white text-decoration-none">FAQs</a></li>
+          <li><a href="why-choose-us.html" class="text-white text-decoration-none">Why Choose Us?</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+          <li><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- ANSWERS SECTION -->
     <section class="answers-section py-5 bg-light">
@@ -355,6 +407,7 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="bg-black text-white py-4 mt-5">
     <div class="container text-center">
       <p>© 2025 SmarterPayouts</p>
@@ -364,6 +417,15 @@
       </p>
     </div>
   </footer>
+
+  <!-- COOKIE NOTIFICATION POPUP -->
+  <div id="cookieConsent" class="cookie-consent" role="alert" aria-live="polite">
+    <p>We use cookies to ensure you get the best experience on our website. By continuing, you agree to our use of cookies.</p>
+    <div class="cookie-buttons">
+      <button id="acceptCookies">Accept All</button>
+      <button id="disableTracking">Disable Tracking</button>
+    </div>
+  </div>
 
   <!-- Bootstrap JS (via CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
