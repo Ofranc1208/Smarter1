@@ -33,14 +33,12 @@
 /* --------------------------------------------------
    Reset & Base Styles
 -------------------------------------------------- */
-/* Remove default margins, padding, and link decorations */
 html, body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
   margin: 0;
   padding: 0;
   text-decoration: none;
 }
 
-/* Base typography and color for body */
 body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
@@ -50,7 +48,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Headings use Oswald for a tall, condensed look */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
@@ -63,7 +60,6 @@ h3 {
 /* --------------------------------------------------
    Utility Classes & Components
 -------------------------------------------------- */
-/* Brand color utility classes */
 .bg-scrunchyellow { background-color: var(--scrunch-yellow) !important; }
 .bg-scrunchblue   { background-color: var(--scrunch-blue) !important; }
 .bg-scrunchpurple { background-color: var(--scrunch-purple) !important; }
@@ -101,12 +97,8 @@ h3 {
 
 /* Hero Move Animation */
 @keyframes gentleMove {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
 }
 .hero-section.hero-move {
   animation: gentleMove var(--animation-duration) ease-in-out forwards !important;
@@ -180,6 +172,58 @@ h3 {
   margin: 0;
 }
 
+/* Stats / Counters Section */
+.stats-section {
+  background-color: #f8f9fa;
+}
+.stat-item {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.stat-item .counter {
+  font-size: 2.5rem;
+  color: var(--scrunch-blue);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Image Frame Section */
+.image-frame-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+.image-frame-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.image-frame {
+  max-width: 400px;
+  margin: 1rem auto;
+  border: 3px solid #fff;
+}
+.image-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Info Section Adjustments */
+.info-section {
+  text-align: left;
+}
+.info-section h5 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.info-section ul li {
+  margin-bottom: 0.5rem;
+}
+.info-section ul li a {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
 /* Answers Section */
 .answers-section {
   padding: 2rem;
@@ -245,7 +289,6 @@ footer {
   padding: 10px 0;
   margin-bottom: 2rem;
 }
-
 .banner {
   display: flex;
   align-items: center;
@@ -257,34 +300,24 @@ footer {
   font-family: oswald, sans-serif;
   color: var(--text-color);
 }
-
 .banner:hover {
   animation-play-state: paused;
 }
-
-/* Container for logos */
 .ticker-logos {
   display: inline-flex;
   align-items: center;
   gap: 50px;
 }
-
-/* Adjust logo sizes to be about 65% smaller */
 .ticker-logo {
-  max-height: 30px; /* Adjust as needed */
+  max-height: 30px;
   width: auto;
 }
-
-/* Example ticker keyframes (left-to-right) */
 @keyframes ticker {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
+/* Stats / Counters Keyframes (if needed) */
 /* Optional Star Icon */
 .star-icon {
   display: inline-block;
