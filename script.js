@@ -75,3 +75,56 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// YouTube IFrame API: Pause Carousel When Video Plays
+var players = [];
+function onYouTubeIframeAPIReady() {
+  const iframes = document.querySelectorAll('#profileCarousel iframe');
+  iframes.forEach((iframe) => {
+    // Ensure the iframe URL includes "enablejsapi=1"
+    let src = iframe.getAttribute('src');
+    if (!src.includes('enablejsapi=1')) {
+      const separator = src.includes('?') ? '&' : '?';
+      src += separator + 'enablejsapi=1';
+      iframe.setAttribute('src', src);
+    }
+    // Create a new YouTube player instance for each iframe
+    const player = new YT.Player(iframe, {
+      events: {
+        'onStateChange': onPlayerStateChange
+      }
+    });
+    players.push(player);
+  });
+}
+
+function pauseCarousel() {
+  const carouselEl = document.getElementById('profileCarousel');
+  const carouselInstance = bootstrap.Carousel.getInstance(carouselEl);
+  if (carouselInstance) {
+    console.log("Pausing carousel because video is playing/clicked");
+    carouselInstance.pause();
+    // Optionally disable auto sliding completely by clearing the interval if it exists
+    if (carouselInstance._interval) {
+      clearInterval(carouselInstance._interval);
+      carouselInstance._interval = null;
+    }
+  }
+}
+
+function onPlayerStateChange(event) {
+  // If the video starts playing, pause the carousel
+  if (event.data === YT.PlayerState.PLAYING) {
+    pauseCarousel();
+  }
+}
+
+// Additionally, add click event listeners to each iframe to pause the carousel when clicked
+document.addEventListener("DOMContentLoaded", () => {
+  const iframes = document.querySelectorAll('#profileCarousel iframe');
+  iframes.forEach(iframe => {
+    iframe.addEventListener('click', () => {
+      pauseCarousel();
+    });
+  });
+});
