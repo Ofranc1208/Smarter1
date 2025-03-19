@@ -6,37 +6,34 @@
 :root {
   /* Brand Colors */
   --scrunch-yellow: #ffd60a;
-  --scrunch-blue: #97c6fe;
+  --scrunch-blue:   #97c6fe;
   --scrunch-purple: #b880ff;
-  --scrunch-green: #73d99d;
+  --scrunch-green:  #73d99d;
   --scrunch-orange: #ffaa48;
   
   /* Basic Colors */
-  --text-color: #000;
+  --text-color:           #000;
   --secondary-text-color: #333;
-  --light-gray: #f9f9f9;
-  --medium-gray: #777;
-  --footer-bg: #000;
-  --footer-text: #fff;
+  --light-gray:           #f9f9f9;
+  --medium-gray:          #777;
+  --footer-bg:            #000;
+  --footer-text:          #fff;
   
   /* Animation Duration */
   --animation-duration: 1s;
 }
 
-/* Universal Box-Sizing */
+/* Universal Box-Sizing & Reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
-/* --------------------------------------------------
-   Reset & Base Styles
--------------------------------------------------- */
 html, body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
   margin: 0;
   padding: 0;
   text-decoration: none;
 }
 
+/* Base Typography */
 body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
@@ -45,7 +42,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
@@ -55,9 +51,7 @@ h3 {
   line-height: 1.2;
 }
 
-/* --------------------------------------------------
-   Utility Classes & Components
--------------------------------------------------- */
+/* Utility Classes */
 .bg-scrunchyellow { background-color: var(--scrunch-yellow) !important; }
 .bg-scrunchblue   { background-color: var(--scrunch-blue) !important; }
 .bg-scrunchpurple { background-color: var(--scrunch-purple) !important; }
@@ -88,8 +82,6 @@ h3 {
   font-size: 1.125rem;
   margin-bottom: 1.5rem;
 }
-
-/* Hero Move Animation */
 @keyframes gentleMove {
   0% { transform: translateY(0); }
   100% { transform: translateY(-10px); }
@@ -98,7 +90,7 @@ h3 {
   animation: gentleMove var(--animation-duration) ease-in-out forwards !important;
 }
 
-/* Carousel Profile Image */
+/* Carousel & Profile Images */
 .profile-img {
   max-width: 100%;
   height: auto;
@@ -113,6 +105,7 @@ h3 {
   color: var(--text-color);
   font-family: 'Inter', sans-serif;
   font-weight: 600;
+  transition: background-color 0.2s ease;
 }
 .btn-warning:hover { background-color: #ffcf2e; }
 
@@ -132,8 +125,14 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.trusted-logos div { font-size: 1.125rem; color: var(--medium-gray); }
-.trusted-logos img { max-height: 28px; filter: grayscale(100%); }
+.trusted-logos div {
+  font-size: 1.125rem;
+  color: var(--medium-gray);
+}
+.trusted-logos img {
+  max-height: 28px;
+  filter: grayscale(100%);
+}
 
 /* Explore Section */
 .explore-section {
@@ -141,7 +140,10 @@ h3 {
   text-align: center;
   background-color: var(--light-gray);
 }
-.explore-section h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+.explore-section h2 { 
+  font-size: 2rem; 
+  margin-bottom: 1.5rem; 
+}
 .explore-cards .card {
   border: none;
   min-height: 150px;
@@ -150,10 +152,15 @@ h3 {
   align-items: center;
   color: var(--text-color);
 }
-.explore-cards .card h5 { font-size: 1.25rem; margin: 0; }
+.explore-cards .card h5 {
+  font-size: 1.25rem;
+  margin: 0;
+}
 
 /* Stats / Counters Section */
-.stats-section { background-color: #f8f9fa; }
+.stats-section {
+  background-color: #f8f9fa;
+}
 .stat-item {
   font-size: 1.25rem;
   font-weight: 400;
@@ -171,7 +178,10 @@ h3 {
   padding: 2rem 0;
   text-align: center;
 }
-.image-frame-section h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+.image-frame-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
 .image-frame {
   max-width: 400px;
   margin: 1rem auto;
@@ -183,11 +193,21 @@ h3 {
   height: auto;
 }
 
-/* Info Section Adjustments */
-.info-section { text-align: left; }
-.info-section h5 { font-size: 1rem; margin-bottom: 1rem; }
-.info-section ul li { margin-bottom: 0.5rem; }
-.info-section ul li a { font-size: 0.875rem; line-height: 1.4; }
+/* Info Section */
+.info-section {
+  text-align: left;
+}
+.info-section h5 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.info-section ul li {
+  margin-bottom: 0.5rem;
+}
+.info-section ul li a {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
 
 /* Answers Section */
 .answers-section {
@@ -196,10 +216,15 @@ h3 {
   color: var(--text-color);
   background-color: var(--scrunch-orange);
 }
-.answers-section h3 { font-size: 1.75rem; margin-bottom: 1rem; }
+.answers-section h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
 
 /* Generic Content Sections */
-.content-section { padding: 2rem 1rem; }
+.content-section {
+  padding: 2rem 1rem;
+}
 .content-section h4 {
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
@@ -269,13 +294,18 @@ footer {
   font-family: oswald, sans-serif;
   color: var(--text-color);
 }
-.banner:hover { animation-play-state: paused; }
+.banner:hover {
+  animation-play-state: paused;
+}
 .ticker-logos {
   display: inline-flex;
   align-items: center;
   gap: 50px;
 }
-.ticker-logo { max-height: 30px; width: auto; }
+.ticker-logo {
+  max-height: 30px;
+  width: auto;
+}
 @keyframes ticker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
@@ -324,4 +354,123 @@ footer {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1;
+}
+
+/* --------------------------------------------------
+/***********************************************
+   SPEED-DIAL "GET IN TOUCH" FAB
+***********************************************/
+
+/* Container for the entire speed dial */
+.fab-speed-dial {
+  position: fixed;
+  bottom: 2rem; /* Adjust as needed for spacing above footer */
+  right: 2rem;  /* Pin to bottom-right; or center with left:50%, transform, etc. */
+  z-index: 9999;
+}
+
+/* Main FAB (launcher) - pill shape with text + optional icon */
+.fab-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;            /* space between icon and text */
+  background-color: var(--scrunch-yellow);
+  color: #000;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 1.25rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.fab-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Optional icon inside the main FAB */
+.fab-main-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Child FAB container: hidden by default */
+.fab-items {
+  display: flex;
+  flex-direction: column; /* stack vertically below the main FAB */
+  align-items: flex-end;  /* align to right edge of main FAB */
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  
+  /* Hidden initially */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Toggle the .open class on .fab-speed-dial to show these child FABs */
+.fab-speed-dial.open .fab-items {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Each child FAB (Call, Contact, Chat) */
+.fab-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  color: #000; /* black text */
+  background-color: #eee; /* fallback color */
+  min-width: 130px;       /* ensure consistent button width */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.fab-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Icon inside each child FAB */
+.fab-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+.fab-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Distinct brand color for each child FAB */
+.fab-call {
+  background-color: var(--scrunch-green); 
+}
+.fab-contact {
+  background-color: var(--scrunch-yellow);
+}
+.fab-chat {
+  background-color: var(--scrunch-blue);
+}
+
+/* Mobile: if you prefer them to appear above the main FAB, keep the default. 
+   If you want them horizontally on mobile, you can tweak flex-direction below. */
+@media (max-width: 575.98px) {
+  .fab-items {
+    align-items: flex-end;
+    /* or row if you want horizontal on mobile:
+    flex-direction: row;
+    */
+  }
 }

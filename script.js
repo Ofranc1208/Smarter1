@@ -1,8 +1,13 @@
-// Navigation Active Link Highlight
+/****************************************************
+ * MAIN SCRIPTS
+ ****************************************************/
 document.addEventListener('DOMContentLoaded', () => {
+  /* ----------------------------------------------
+   * 1) Highlight Active Navigation Link
+   * ---------------------------------------------- */
   let currentPath = window.location.pathname;
   if (currentPath === '/' || currentPath === '') {
-    currentPath = '/index.html';
+    currentPath = '/index.html'; // Fallback if root path is blank
   }
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
   navLinks.forEach(link => {
@@ -11,120 +16,151 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
     }
   });
-});
 
-// Counter Animation with Prefix/Suffix Support
-document.addEventListener("DOMContentLoaded", function() {
-  if (!("IntersectionObserver" in window)) {
-    console.warn("IntersectionObserver is not supported. Consider adding a polyfill.");
-  }
-  const counters = document.querySelectorAll(".counter");
-  const duration = 2500; // Duration in milliseconds
-
-  const animateCounter = (counter, startTime) => {
-    const target = +counter.getAttribute("data-target");
-    const prefix = counter.getAttribute("data-prefix") || "";
-    const suffix = counter.getAttribute("data-suffix") || "";
-    const elapsed = performance.now() - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    const currentValue = Math.ceil(progress * target);
-    counter.innerText = prefix + currentValue + suffix;
-    if (progress < 1) {
-      requestAnimationFrame(() => animateCounter(counter, startTime));
-    } else {
-      counter.innerText = prefix + target + suffix;
-    }
-  };
-
-  const observerOptions = { root: null, threshold: 0.5 };
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const counter = entry.target;
-        const startTime = performance.now();
-        animateCounter(counter, startTime);
-        observer.unobserve(counter);
-      }
-    });
-  }, observerOptions);
-  counters.forEach(counter => observer.observe(counter));
-});
-
-// Cookie Notification Popup
-document.addEventListener('DOMContentLoaded', function() {
+  /* ----------------------------------------------
+   * 2) Cookie Notification Popup
+   * ---------------------------------------------- */
   const cookieConsent = document.getElementById('cookieConsent');
-  if (!localStorage.getItem('cookieConsent')) {
+  if (cookieConsent && !localStorage.getItem('cookieConsent')) {
     cookieConsent.style.display = 'flex';
   }
+
   const acceptCookies = document.getElementById('acceptCookies');
   const disableTracking = document.getElementById('disableTracking');
 
   if (acceptCookies) {
-    acceptCookies.addEventListener('click', function() {
+    acceptCookies.addEventListener('click', () => {
       localStorage.setItem('cookieConsent', 'accepted');
       cookieConsent.style.display = 'none';
-      // Load analytics scripts here if necessary.
+      // If needed, load analytics scripts here.
     });
   }
 
   if (disableTracking) {
-    disableTracking.addEventListener('click', function() {
+    disableTracking.addEventListener('click', () => {
       localStorage.setItem('cookieConsent', 'disabled');
-      // Disable tracking code here if necessary.
       cookieConsent.style.display = 'none';
+      // If needed, disable analytics scripts here.
+    });
+  }
+
+  /* ----------------------------------------------
+   * 3) Counter Animation via IntersectionObserver
+   * ---------------------------------------------- */
+  if (!('IntersectionObserver' in window)) {
+    console.warn('IntersectionObserver not supported. Consider adding a polyfill.');
+  }
+  const counters = document.querySelectorAll('.counter');
+  const duration = 2500; // 2.5s animation
+
+  const animateCounter = (counter, startTime) => {
+    const target = +counter.getAttribute('data-target');
+    const prefix = counter.getAttribute('data-prefix') || '';
+    const suffix = counter.getAttribute('data-suffix') || '';
+    const elapsed = performance.now() - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+
+    // Calculate current value and update text
+    const currentValue = Math.ceil(progress * target);
+    counter.textContent = prefix + currentValue + suffix;
+
+    if (progress < 1) {
+      requestAnimationFrame(() => animateCounter(counter, startTime));
+    } else {
+      // Final exact value
+      counter.textContent = prefix + target + suffix;
+    }
+  };
+
+  const observerOptions = { root: null, threshold: 0.5 };
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const startTime = performance.now();
+        animateCounter(entry.target, startTime);
+        obs.unobserve(entry.target); // Stop observing once animated
+      }
+    });
+  }, observerOptions);
+
+  counters.forEach(counter => observer.observe(counter));
+
+  /* ----------------------------------------------
+   * 4) (Optional) Speed-Dial or FAB Toggle
+   * ---------------------------------------------- */
+  const speedDial = document.querySelector('.fab-speed-dial');
+  const mainFab = document.querySelector('.fab-main');
+  if (mainFab && speedDial) {
+    mainFab.addEventListener('click', () => {
+      speedDial.classList.toggle('open');
     });
   }
 });
 
-// YouTube IFrame API: Pause Carousel When Video Plays
+/****************************************************
+ * YOUTUBE IFRAME API
+ ****************************************************/
+// Keep these as global so YouTube's API can invoke them
 var players = [];
+
+/**
+ * Called automatically by YouTube's IFrame API once it’s loaded.
+ */
 function onYouTubeIframeAPIReady() {
   const iframes = document.querySelectorAll('#profileCarousel iframe');
-  iframes.forEach((iframe) => {
-    // Ensure the iframe URL includes "enablejsapi=1"
-    let src = iframe.getAttribute('src');
+  iframes.forEach(iframe => {
+    // Ensure enablejsapi=1 for script control
+    let src = iframe.getAttribute('src') || '';
     if (!src.includes('enablejsapi=1')) {
       const separator = src.includes('?') ? '&' : '?';
       src += separator + 'enablejsapi=1';
       iframe.setAttribute('src', src);
     }
-    // Create a new YouTube player instance for each iframe
+
+    // Create a new YouTube player
     const player = new YT.Player(iframe, {
       events: {
-        'onStateChange': onPlayerStateChange
+        onStateChange: onPlayerStateChange
       }
     });
     players.push(player);
   });
 }
 
+/**
+ * Pause the Bootstrap carousel if a video is playing.
+ */
 function pauseCarousel() {
   const carouselEl = document.getElementById('profileCarousel');
+  if (!carouselEl) return;
+
   const carouselInstance = bootstrap.Carousel.getInstance(carouselEl);
   if (carouselInstance) {
-    console.log("Pausing carousel because video is playing/clicked");
+    console.log('Pausing carousel because video is playing/clicked');
     carouselInstance.pause();
-    // Optionally disable auto sliding completely by clearing the interval if it exists
-    if (carouselInstance._interval) {
-      clearInterval(carouselInstance._interval);
-      carouselInstance._interval = null;
-    }
+    // Also disable auto sliding
+    carouselEl.setAttribute('data-bs-interval', 'false');
   }
 }
 
+/**
+ * Callback when a YouTube video’s state changes.
+ * Pauses the carousel on PLAYING state.
+ */
 function onPlayerStateChange(event) {
-  // If the video starts playing, pause the carousel
   if (event.data === YT.PlayerState.PLAYING) {
     pauseCarousel();
   }
 }
 
-// Additionally, add click event listeners to each iframe to pause the carousel when clicked
-document.addEventListener("DOMContentLoaded", () => {
-  const iframes = document.querySelectorAll('#profileCarousel iframe');
-  iframes.forEach(iframe => {
-    iframe.addEventListener('click', () => {
-      pauseCarousel();
-    });
-  });
-});
+/****************************************************
+ * ADDITIONAL EXAMPLE FUNCTIONS
+ ****************************************************/
+/** 
+ * Example Chat function placeholder.
+ * Replace alert() with actual chat integration.
+ */
+function openChatFunction() {
+  alert('Launching chat window...');
+  // Insert real chat code or link here
+}
